@@ -48,7 +48,7 @@ export default {
   build: {
   },
   axios: {
-   baseURL: process.env.API_URL
+   baseURL: 'https://troov-api.herokuapp.com/api'
   },
   auth: {
     strategies: {
