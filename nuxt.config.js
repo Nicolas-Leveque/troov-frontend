@@ -39,10 +39,24 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/axios',
+    '@nuxtjs/auth'
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+  axios: {
+   baseURL: process.env.API_URL
+  },
+  auth: {
+    strategies: {
+      local: {
+        login:{ url: 'user/login', method: 'post', propertyName: 'data.token' },
+        logout: false
+      }
+    }
+
   }
 }
