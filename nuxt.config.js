@@ -34,14 +34,16 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/dotenv'
+    '@nuxtjs/dotenv',
+    '@nuxt/image'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxtjs/axios',
-    '@nuxtjs/auth'
+    '@nuxtjs/auth-next',
+    '@nuxt/image'
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -54,6 +56,7 @@ export default {
    baseURL: 'https://troov-api.herokuapp.com/api'
   },
   auth: {
+    redirect: false,
     strategies: {
       local: {
         endpoints: {
