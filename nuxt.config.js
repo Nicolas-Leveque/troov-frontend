@@ -47,14 +47,20 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   },
+  router: {
+    middleware: ['auth']
+  },
   axios: {
-   baseURL: process.env.API_URL
+   baseURL: 'https://troov-api.herokuapp.com/api'
   },
   auth: {
     strategies: {
       local: {
-        login:{ url: 'user/login', method: 'post', propertyName: 'data.token' },
-        logout: false
+        endpoints: {
+          login: { url: 'user/login', method: 'post', propertyName: 'data.token' },
+          logout: false,
+          user: false
+        }
       }
     }
 
