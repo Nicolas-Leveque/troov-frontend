@@ -11,7 +11,7 @@
         </NuxtLink>
       </li>
     </ul>
-    <button @click="showForm = !showform">Ajouter un objet</button>
+    <button @click="showForm = !showForm"  class="py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Ajouter un objet</button>
     <add-object v-if="showForm"/>
   </div>
 </template>

@@ -1,5 +1,5 @@
 <template>
-  <form @submit.prevent="modifyObj" method="POST" class="m-10 flex flex-col items-center">
+  <form @submit.prevent="modifyObj" method="PUT" class="m-10 flex flex-col items-center">
     <div class="min-w-full">
       <label for="name" class="sr-only">Nom</label>
       <input type="text" id="name" name="name" v-model="name" placeholder="nom" class="rounded-t relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm">
@@ -38,7 +38,7 @@ export default {
       formData.append('image', this.image)
       await this.$axios.$put(`/object/${this.objet._id}`, formData, {
         headers: {
-          'Content-Type': "multipart/form-data"
+          'Content-Type': 'multipart/form-data'
         }
       })
       this.$nuxt.refresh()

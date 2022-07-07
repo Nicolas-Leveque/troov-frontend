@@ -52,7 +52,8 @@
             email: this.email,
             password: this.password
           })
-          await localStorage.setItem('auth._token.local', `Bearer ${user.data.token}`)
+          localStorage.setItem('auth._token.local', `Bearer ${user.data.token}`)
+          localStorage.setItem('userId', user.data.userId)
           this.$router.push('/content')
 
         } catch(e) {

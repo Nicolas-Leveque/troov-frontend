@@ -50,6 +50,7 @@
           })
           console.log(user)
           await localStorage.setItem('auth._token.local', `Bearer ${user.data.token}`)
+          localStorage.setItem('userId', user.data.userId)
           this.$router.push('/content')
         } catch (e) {
           this.error = e.response.data.message
