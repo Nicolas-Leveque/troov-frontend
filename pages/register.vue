@@ -52,7 +52,8 @@
             email: this.email,
             password: this.password
           })
-          console.log(user.data)
+          await localStorage.setItem('auth._token.local', `Bearer ${user.data.token}`)
+          this.$router.push('/content')
 
         } catch(e) {
           this.error = e.response.data.message
