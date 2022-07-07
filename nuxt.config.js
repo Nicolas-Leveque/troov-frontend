@@ -53,7 +53,7 @@ export default {
     middleware: ['auth']
   },
   axios: {
-   baseURL: 'https://troov-api.herokuapp.com/api'
+   baseURL: 'http://localhost:3001/api'
   },
   auth: {
     redirect: false,
