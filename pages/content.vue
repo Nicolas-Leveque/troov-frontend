@@ -11,14 +11,18 @@
         </NuxtLink>
       </li>
     </ul>
-    
+    <button @click="showForm = !showform">Ajouter un objet</button>
+    <add-object v-if="showForm"/>
   </div>
 </template>
 <script>
 export default {
+  components: {},
+
   data() {
     return {
-      objects: []
+      objects: [],
+      showForm: false
     }
   },
   async fetch() {
