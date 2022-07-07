@@ -1,6 +1,6 @@
 <template>
-  <div class="flex flex-col items-center bg-gray-50 min-h-screen p-14">
-    <h1 class="mb-20 justify-self-start">Liste des objets</h1>
+  <div class="flex flex-col justify-between items-center bg-gray-50 min-h-screen p-14">
+    <h1 class="justify-self-start text-4xl">Liste des objets</h1>
     <p v-if="$fetchState.pending">...Chargement</p>
     <p v-else-if="$fetchState.error">Une erreur est survenue pendant le chargement des objets</p>
     <ul v-else class="flex flex-wrap w-full justify-center">
